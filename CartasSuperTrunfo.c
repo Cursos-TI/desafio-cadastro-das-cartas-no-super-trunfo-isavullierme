@@ -2,21 +2,46 @@
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
 
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
+    //Váriaveis para armazenar os atributos da cidade
+    char codigo[4]; // Código da Carta
+    char nome[50];  // Nome da Cidade
+    int populacao;  // População
+    float area;     // Área em km^2
+    double pib;     // PIB em bilhões
+    int pontos_turisticos;  // Número de pontos turísticos
     
     // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
+    printf("=== Cadastro de Carta - Super Trunfo Países ===/n");
     
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    // Solicita os dados da Cidade:
+    printf("Código da Carta (ex: A01, B02): ");
+    scanf("%s", codigo);
+
+    printf("Nome da cidade: ");
+    scanf("%s", nome);
+
+    printf("População: ");
+    scanf("%d", &populacao);
+    
+    printf("Área (em km^2): ");
+    scanf("%f" , &area);
+
+    printf("PIB (em bilhões): ");
+    scanf("%lf", &pib);
+
+    printf("Número de pontos turísticos: ");
+    scanf("%d", &pontos_turisticos);
+
+    // Exibição dos Dados da Carta:
+    printf("/n=== Dados da Cidade Cadastrada ===/n");
+    printf("Código: %s/n", codigo);
+    printf("Nome: %s/n", nome);
+    printf("População: %d/n", populacao);
+    printf("Área: %2.f/n km^2", area);
+    printf("PIB: %.2lf bilhões/n", pib);
+    printf("Pontos Turísticos: %d/n", pontos_turisticos);
 
     return 0;
 }
